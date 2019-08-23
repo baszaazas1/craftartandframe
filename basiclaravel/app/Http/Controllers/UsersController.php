@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsersController extends Controller
 {
@@ -13,7 +14,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -34,7 +35,15 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, 
+        ['fname'=> 'required','lname'=>'required']);     
+        $user = new User([ 
+            'fname' => $request->get('fname'),
+            'lname' => $request->get('lname')]);
+
+        $user->save();
+        return redirect()->route('user.create')->with('success', 'บันทึกข้อมูลเรียบร้อย');
+        
     }
 
     /**

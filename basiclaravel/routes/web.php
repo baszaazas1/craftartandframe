@@ -11,15 +11,8 @@
 |
 123
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('welcome/{name}','HelloController@showHello');
-
-Route::get('/show','HelloController@index');
-
 Route::get('/create',function(){
-    return view('product.home');
+    return view('user.index');
 });
+
+Route::resource('user','UsersController');
