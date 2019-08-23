@@ -19,3 +19,5 @@ Route::get('/', function () {
 Route::get('users',function(){
     return 'Users';
 });
+
+Route::get('welcome/{name}','HelloController@showHello');
