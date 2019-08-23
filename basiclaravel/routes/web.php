@@ -16,14 +16,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('users',function(){
-    return 'Users';
-});
-
-Route::get('/index',function(){
-    return view('product.index');
-});
-
 Route::get('welcome/{name}','HelloController@showHello');
 
 Route::get('/show','HelloController@index');
+
+Route::get('/create',function(){
+    return view('product.home');
+});
