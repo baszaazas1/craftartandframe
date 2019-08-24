@@ -51,7 +51,7 @@
                         $('tbody').html(data.table_data);
                         $('#total_records').text(data.total_data);
                     }
-            })
+            });
         }
 
     </script>
