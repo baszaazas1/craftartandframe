@@ -85,9 +85,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
+                <a href="{{url('/user/create')}}">เพิ่มข้อมูล</a>
+                    <a href="{{url('/user')}}">ข้อมูลทั้งหมด</a>
+                    <a href="{{url('/upload')}}">อัปโหลดรูปภาพ</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
