@@ -14,7 +14,7 @@
             html, body {
                 background-color: #fff;
                 color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                font-family: 'Kanit', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    CRAFT ART & FRAME
                 </div>
 
                 <div class="links">
