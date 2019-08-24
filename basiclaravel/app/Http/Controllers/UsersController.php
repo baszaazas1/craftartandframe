@@ -14,7 +14,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('user.index');
+        $users = User::all()->toArray();
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -42,7 +43,7 @@ class UsersController extends Controller
             'lname' => $request->get('lname')]);
 
         $user->save();
-        return redirect()->route('user.create')->with('success', 'บันทึกข้อมูลเรียบร้อย');
+        return redirect()->route('user.index')->with('success', 'บันทึกข้อมูลเรียบร้อย');
         
     }
 
@@ -65,7 +66,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.edit',compact('user','id'));
     }
 
     /**
@@ -88,6 +90,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('user.index')->with('success','ลบข้อมูลเรียบร้อย');
     }
 }
