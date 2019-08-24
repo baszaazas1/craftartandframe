@@ -19,3 +19,7 @@ Route::resource('user','UsersController');
 
 Route::get('/search','SearchController@search')->name('user.search');
 Route::get('/action','SearchController@action')->name('user.action');
+
+//upload image
+Route::get('/upload','UploadController@index');
+Route::post('/upload','UploadController@upload');
