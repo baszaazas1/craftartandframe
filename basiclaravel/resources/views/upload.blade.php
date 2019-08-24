@@ -28,9 +28,9 @@
                     <button type="button" class="close" data-dismiss="alert">×</button>
                     <strong>{{ $message }}</strong>
                 </div>
-                <img src="/images/{{ Session::get('path') }}" width="300" />
+                <div align='center'><img src="/images/{{ Session::get('path') }}" width="300" /> </div>
             @endif
-            
+
         <br><br>
 
     <form method="POST" action="{{url('/upload')}}" enctype="multipart/form-data">
