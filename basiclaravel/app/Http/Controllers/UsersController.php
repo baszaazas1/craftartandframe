@@ -14,8 +14,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::all()->toArray();
+        $users = User::paginate(5);
         return view('user.index', compact('users'));
+
+
     }
 
     /**
@@ -79,7 +81,15 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,
+        ['fname'=>'required',
+        'lname'=>'required']);
+
+        $user = User::find($id);
+        $user->fname = $request->get('fname');
+        $user->lname = $request->get('lname');
+        $user->save();
+        return redirect()->route('user.index')->with('success','อัพเดตเรียบร้อย');
     }
 
     /**

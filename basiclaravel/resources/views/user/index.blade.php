@@ -1,7 +1,7 @@
 @extends('master')
 @section('title','จัดการฐานข้อมูล')
 @section('content')
-<h1 align="middle">Show Data</h1>
+<h1 align="middle">Show Data</h1> <br><br>
     <div class="container">
     @if(\Session::has('success'))
         <div class="alert alert-success">
@@ -9,10 +9,8 @@
         </div>
     @endif
         <div class="row">
-            <div class="col-md-12>
-                <div class="col-md-12">
-                    <a href="{{route('user.create')}}" class="btn btn-success" >เพิ่มข้อมูล</a>
-                </div>
+            <div class="col-md-12">
+                
                 <table class="table table-bordered table-striped">
                     <tr>
                         <th>ID</th>
@@ -39,6 +37,11 @@
                         @endforeach
                 </table>
 
+                {{$users->links()}} 
+                <div align="right">
+                    <a href="{{route('user.create')}}" class="btn btn-success" >เพิ่มข้อมูล</a>
+                    <a href="{{route('user.search')}}" class="btn btn-primary" >ค้นหาข้อมูล</a>
+                </div>
             </div>
         </div>
     </div>

@@ -16,3 +16,6 @@ Route::get('/create',function(){
 });
 
 Route::resource('user','UsersController');
+
+Route::get('/search','SearchController@search')->name('user.search');
+Route::get('/action','SearchController@action')->name('user.action');
