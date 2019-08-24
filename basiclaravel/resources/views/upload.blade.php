@@ -11,7 +11,28 @@
 <body>
     
     <div class="container">
+            <br><br>
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                ข้อผิดพลาด<br><br>
+                <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+                </ul>
+            </div>
+           @endif
+
+           @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-block">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>{{ $message }}</strong>
+                </div>
+                <img src="/images/{{ Session::get('path') }}" width="300" />
+            @endif
+            
         <br><br>
+
     <form method="POST" action="{{url('/upload')}}" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="form-group">
