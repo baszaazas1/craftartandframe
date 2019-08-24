@@ -13,7 +13,7 @@ class UploadController extends Controller
     function upload(Request $request){
 
         $this->validate($request, 
-        [' select_image '  => 'required|image|mimes:jpg,png,jpeg|max:2048']);  
+        ['select_image'  => 'required|image|mimes:jpg,png,jpeg|max:2048']);  
         $image = $request->file('select_image'); 
 
         $new_name = rand() . '.' . $image->getClientOriginalExtension();      
