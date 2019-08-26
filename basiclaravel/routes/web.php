@@ -19,15 +19,14 @@ Route::get('/shop',function(){
     return view('shop');
 });
 
-Route::get('/product',function(){
-    return view('product');
-});
 
 Route::get('/create',function(){
     return view('user.index');
 });
 
 Route::resource('user','UsersController');
+
+Route::resource('product','ProductController');
 
 Route::get('/search','SearchController@search')->name('user.search');
 Route::get('/action','SearchController@action')->name('user.action');
