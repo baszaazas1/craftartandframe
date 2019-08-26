@@ -34,8 +34,11 @@ Route::get('/action','SearchController@action')->name('user.action');
 Route::get('/display','DisplayController@create');
 Route::get('/index','DisplayController@index');
 Route::get('/auto','AutoCompleteController@index');
-Route::post('/auto','AutoCompleteController@show')->name('autocomplete.show');;
+Route::post('/auto','AutoCompleteController@show')->name('autocomplete.show');
 
-//upload image
-Route::get('/upload','UploadController@index');
-Route::post('/upload','UploadController@upload');
+// //upload image
+// Route::get('/upload','UploadController@index');
+// Route::post('/upload','UploadController@upload');
+
+Route::get('/upload','FileController@index');
+Route::post('/upload','FileController@upload')->name('image.upload');
