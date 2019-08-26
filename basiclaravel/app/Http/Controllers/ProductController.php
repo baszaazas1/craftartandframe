@@ -45,7 +45,7 @@ class ProductController extends Controller
             'type_id'=>$request->get('typename')        
             ]);               
             $product->save();            
-            return redirect()->route('product.create');
+            return redirect()->route('product.index');
     }
 
     /**

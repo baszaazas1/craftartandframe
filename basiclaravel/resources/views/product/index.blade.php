@@ -29,7 +29,8 @@
                   <tr>
                       <td>{{$row->id}}</td>
                       <td>{{$row->name}}</td>
-
+                      <td>{{number_format($row->price,2)}}</td>
+                      <td>{{$row->typeProduct->type_name}}</td>
                   </tr>
                   </tbody>
                   @endforeach
