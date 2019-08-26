@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Art Able</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -81,14 +81,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    CRAFT ART & FRAME
+                    ART ABLE
                 </div>
 
                 <div class="links">
                 <a href="{{url('/user/create')}}">เพิ่มข้อมูล</a>
                     <a href="{{url('/user')}}">ข้อมูลทั้งหมด</a>
                     <a href="{{url('/upload')}}">อัปโหลดรูปภาพ</a>
-                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="/shop">Shop</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>

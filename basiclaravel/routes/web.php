@@ -15,6 +15,14 @@ Route::get('/',function(){
     return view('welcome');
 });
 
+Route::get('/shop',function(){
+    return view('shop');
+});
+
+Route::get('/product',function(){
+    return view('product');
+});
+
 Route::get('/create',function(){
     return view('user.index');
 });
