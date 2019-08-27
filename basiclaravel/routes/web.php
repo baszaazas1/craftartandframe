@@ -45,3 +45,5 @@ Route::post('/upload','FileController@upload')->name('image.upload');
 
 Route::get('crop','CropController@index');
 Route::post('crop','CropController@cropImage')->name('crop');
+
+Route::get('food','FoodController@loadmore');

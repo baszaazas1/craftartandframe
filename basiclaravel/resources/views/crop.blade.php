@@ -11,29 +11,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.2/croppie.js"></script>
 </head>
-<body>
-
+<body><div id="upload-demo"></div>
         <div class="container">
                 <div class="panel panel-info">
                   <div class="panel-heading">Cropping and Upload</div>
                   <div class="panel-body">
-                    <div class="row">
-                      <div class="col-md-4 text-center">
-                      <div id="upload-demo"></div>
-                      </div>
-                      <div class="col-md-4" style="padding:5%;">
-                      <strong>Select image to crop:</strong>
-                      <input type="file" id="image">
-                      <button class="btn btn-primary btn-block upload-image" style="margin-top:2%">Upload Image</button>
-                      </div>
-                      <div class="col-md-4">
-                      <div id="preview-crop-image" style="background:#9d9d9d;width:300px;padding:50px 50px;height:300px;"></div>
-                      </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-md-4 text-center">
+                                
+                                </div>
+                                <div class="col-md-4" style="padding:5%;">
+                                <strong>Select image to crop:</strong>
+                                <input type="file" id="image">
+                                <button class="btn btn-primary btn-block upload-image" style="margin-top:2%">Upload Image</button>
+                                </div>
+                                <div class="col-md-4">
+                                <div id="preview-crop-image" style="background:#9d9d9d;width:300px;padding:50px 50px;height:300px;"></div>
+                            </div>
+                        </div>
                   </div>
                 </div>
-              </div>
-    
+        </div>    
 </body>
 
 <script type="text/javascript">
@@ -46,12 +44,12 @@
         enableExif:true,
         enableOrientation:true,
         viewport:{
-            width:150,
-            height:200
+            width:200,
+            height:150
         },
         boundary:{
-            width:330,
-            height:330
+            width:1000,
+            height:1000
         }
     });
     $('#image').on('change',function(){
