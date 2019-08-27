@@ -42,3 +42,6 @@ Route::post('/auto','AutoCompleteController@show')->name('autocomplete.show');
 
 Route::get('/upload','FileController@index');
 Route::post('/upload','FileController@upload')->name('image.upload');
+
+Route::get('/crop','CropController@index');
+Route::post('/crop','CropController@cropImage')->name('crop');
