@@ -46,13 +46,12 @@
         enableExif:true,
         enableOrientation:true,
         viewport:{
-            width:200,
-            height:200,
-            //type:'circle'
+            width:150,
+            height:200
         },
         boundary:{
-            width:300,
-            height:300
+            width:330,
+            height:330
         }
     });
     $('#image').on('change',function(){

@@ -12,6 +12,7 @@ class CropController extends Controller
     
     function cropImage(Request $request){
         $image=$request->image;
+        //echo $image;
         list($type,$image)=explode(';',$image);
         list(,$image)=explode(',',$image);
         $image=base64_decode($image);
